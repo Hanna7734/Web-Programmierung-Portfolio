@@ -1,0 +1,12 @@
+<body style="background-image: url('https://media.macphun.com/img/uploads/customer/blog/1543597882/15435994595c0175636b7260.24778845.jpg?q=85&w=1680');">
+
+<h1 id=Art>Artikel bearbeiten</h1>
+</br>
+<%= render 'form', artikel: @artikel %>
+</br>
+<%= link_to 'Anzeigen', @artikel, class:"btn btn-success" %> 
+<%= link_to 'Zurück', artikels_path, class:"btn btn-success" %> 
+<br/><br/>
+<%= link_to 'Löschen', @artikel, method: :delete, data: { confirm: 'Wollen Sie den Artikel wirklich löschen??' }, class:"btn btn-danger"%>
+
+</body>

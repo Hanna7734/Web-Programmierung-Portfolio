@@ -1,0 +1,38 @@
+<%= form_with(model: spenden_weihnachtsmarkt, local: true) do |form| %>
+  <% if spenden_weihnachtsmarkt.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(spenden_weihnachtsmarkt.errors.count, "error") %> prohibited this spenden_weihnachtsmarkt from being saved:</h2>
+
+
+      <ul>
+        <% spenden_weihnachtsmarkt.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= form.text_field :vorname, class:"form-control", placeholder:"Vorname" %>
+  </div>
+  <br>
+
+  <div class="field form-group">
+        <%= form.text_field :nachname, class:"form-control", placeholder:"Nachname" %>
+  </div>
+  <br>
+
+  <div class="field form-group">
+        <%= form.text_field :iban, class:"form-control", placeholder:"IBAN" %>
+  </div>
+  <br>
+
+  <div class="field form-group">
+      <%= form.text_field :summe, class:"form-control", placeholder:"Spendensumme" %>
+  </div>
+  <br>
+
+  <div class="actions">
+    <%= form.submit class:"btn btn-success"%> <br>
+  </div>
+<% end %>

@@ -1,0 +1,70 @@
+
+<%= form_with(model: artikel, local: true) do |form| %>
+  <% if artikel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(artikel.errors.count, "error") %> prohibited this artikel from being saved:</h2>
+
+      <ul>
+        <% artikel.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    
+    <%= form.text_field :artikelname, class:"form-control", placeholder:"Artikel" %>
+  </div>
+  <br>
+
+  <div class="field form-group">
+    
+    <%= form.text_field :preis, class:"form-control", placeholder:"Preis" %>
+  </div>
+  <br>
+
+  <div class="field form-group">
+    
+    <%= form.text_field :verkaeufer, class:"form-control", placeholder:"Verkäufer" %>
+  </div>
+  <br>
+
+  <div class="field form-group">
+    
+    <%= form.number_field :anzahl, class:"form-control", placeholder:"Anzahl" %>
+  </div>
+  <br>
+
+  <div class="field form-group">
+    
+    <%= form.text_field :marke, class:"form-control", placeholder:"Markenname" %>
+  </div>
+  <br>
+
+  <div class="field form-group">
+    
+    <%= form.text_field :artikelnummer, class:"form-control", placeholder:"Artikelnummer" %>
+  </div>
+  <br>
+
+  <div class="field form-group">
+    
+    <%= form.text_area :beschreibung, class:"form-control", placeholder:"Beschreibung des Artikels" %>
+  </div>
+
+
+  <div class="field form-group">
+    
+    <%= form.number_field :user_id, id: :artikel_user_id, class:"form-control", value:current_user.id, type: :hidden %>
+  </div>
+ 
+  <br>
+</br>
+  <div class="actions">
+    <%= form.submit class:"btn btn-success" %>
+  </br>
+  </div>
+<% end %>
+
+

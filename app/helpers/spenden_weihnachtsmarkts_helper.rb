@@ -1,0 +1,2 @@
+module SpendenWeihnachtsmarktsHelper
+end

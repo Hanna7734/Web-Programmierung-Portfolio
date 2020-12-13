@@ -1,0 +1,2 @@
+class SpendenWeihnachtsmarkt < ApplicationRecord
+end

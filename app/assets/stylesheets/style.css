@@ -1,0 +1,38 @@
+
+
+
+/*body {
+	background-image: url("https://media.macphun.com/img/uploads/customer/blog/1543597882/15435994595c0175636b7260.24778845.jpg?q=85&w=1680");
+} */
+
+
+h1{
+	font-family:'Georgia';
+	color: rgb(0, 0, 0);
+	font-size: 4em;
+	font-weight: 900;
+	text-align: center;
+	
+}
+
+#Id {
+
+	font-family:'Georgia';
+	color: rgb(255, 255, 255);
+	font-size: 25px;
+	text-align: center;
+	font-weight: 700;
+	text-shadow: 0 0 10px black;
+
+}
+
+#Art {
+
+	font-family:'Georgia';
+	color: rgb(255, 255, 255);
+	font-size: 4em;
+	font-weight: 900;
+	text-align: center;
+	text-shadow: 0 0 10px black;
+}
+

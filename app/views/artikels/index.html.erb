@@ -1,0 +1,52 @@
+<body style="background-image: url('https://media.macphun.com/img/uploads/customer/blog/1543597882/15435994595c0175636b7260.24778845.jpg?q=85&w=1680');">
+
+  <h1 id= "Art"> Artikelliste </h1>
+  <br><br><br>
+
+<% if user_signed_in? %>
+<div class="table-responsive">
+<table class="table table-bordered border-dark table-hover">
+    <thead class="bg-success text-white">
+    
+      
+    <tr>
+      <th>Artikelname</th>
+      <th>Preis</th>
+      <th>Verkaeufer</th>
+      <th>Anzahl</th>
+      <th>Marke</th>
+      <th>Artikelnummer</th>
+      <th>Beschreibung</th>
+      
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @artikels.each do |artikel| %>
+      <tr class="table-light table-bordered border-dark">
+        <td>
+          <%= link_to artikel.artikelname, artikel %> 
+        </td>
+        <td><%= artikel.preis %></td>
+        <td><%= artikel.verkaeufer %></td>
+        <td><%= artikel.anzahl %></td>
+        <td><%= artikel.marke %></td>
+        <td><%= artikel.artikelnummer %></td>
+        <td><%= artikel.beschreibung %></td>
+        
+        
+        <td><%= link_to 'Löschen', artikel, method: :delete, data: { confirm: 'Wollen Sie den Artikel wirklich löschen??' }, class:"btn btn-outline-danger btn-sm"%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+<br>
+
+<%= link_to 'Neuer Artikel', new_artikel_path, class:"btn btn-success" %>
+
+<% end %>
+
+</body>

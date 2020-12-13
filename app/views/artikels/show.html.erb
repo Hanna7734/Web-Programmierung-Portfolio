@@ -1,0 +1,26 @@
+<body style="background-image: url('https://media.macphun.com/img/uploads/customer/blog/1543597882/15435994595c0175636b7260.24778845.jpg?q=85&w=1680');">
+
+<br><br><br>
+<div class="jumbotron bg-light">
+  <h1 class="display-4 text-dark"><%= @artikel.artikelname %></h1>
+  <p class="lead">Für: <%= @artikel.preis %> € <br>
+    Verkäufer: <%= @artikel.verkaeufer %><br>
+    Stück: <%= @artikel.anzahl %><br>
+    Artikelnummer: <%= @artikel.artikelnummer %><br>
+    Marke: <%= @artikel.marke %>
+    </p>
+  <hr class="my-4">
+  <p><%= @artikel.beschreibung %></p>
+  
+  <%= link_to 'Bearbeiten', edit_artikel_path(@artikel), class:"btn btn-success" %> 
+
+<%= link_to 'Zurück', artikels_path, class:"btn btn-success" %>
+<br/><br/>
+<%= link_to 'Löschen', @artikel, method: :delete, data: { confirm: 'Wollen Sie den Artikel wirklich löschen?' }, class:"btn btn-outline-danger"%>
+</div>
+
+
+
+
+</body>
+

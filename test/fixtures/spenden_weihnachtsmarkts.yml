@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vorname: MyString
+  nachname: MyString
+  iban: MyString
+  summe: 9.99
+
+two:
+  vorname: MyString
+  nachname: MyString
+  iban: MyString
+  summe: 9.99

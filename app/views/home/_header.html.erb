@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <%= link_to 'Weihnachtsmarkt', root_path, class:"navbar-brand" %>
+      
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+
+        <% if user_signed_in? %>
+
+        <li class="nav-item">
+          <%= link_to 'Artikel', artikels_path, class:"nav-link" %>
+        </li>
+    
+        <li class="nav-item">
+          <%= link_to 'Profil bearbeiten', edit_user_registration_path, class:"nav-link" %>
+        </li>
+
+        <% else %>
+
+          <li class="nav-item">
+          <%= link_to 'Registrieren', new_user_registration_path, class:"nav-link" %>
+          </li>
+
+          <li class="nav-item">
+          <%= link_to 'Einloggen', new_user_session_path, class:"nav-link" %>
+          </li>
+          <% end %>
+
+          
+        
+        <li class="nav-item">
+          <%= link_to 'About Us', home_about_path, class:"nav-link" %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to 'Spenden', spenden_weihnachtsmarkts_path, class:"nav-link" %>
+       
+      </ul>
+
+      <% if user_signed_in? %>
+
+      
+      
+      <li class="nav-item">
+          <%= link_to 'Ausloggen', destroy_user_session_path, method: :delete, class:"btn btn-outline-light my-2 my-sm-0" %>
+        </li>
+
+
+      <% end %>
+      
+      </form>
+    </div>
+  </div>
+</nav>

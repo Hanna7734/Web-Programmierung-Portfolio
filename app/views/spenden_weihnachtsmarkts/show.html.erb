@@ -1,0 +1,22 @@
+<br><br><br>
+
+<body style="background-image: url('https://media.macphun.com/img/uploads/customer/blog/1543597882/15435994595c0175636b7260.24778845.jpg?q=85&w=1680');">
+
+<div class="jumbotron bg-light">
+  <h1 class="display-4"> Überblick über Ihre Spende</h1>
+  <p class="lead"> <strong> Name:  <%=@spenden_weihnachtsmarkt.vorname %> <%= @spenden_weihnachtsmarkt.nachname %></strong><br>
+  	<strong> IBAN: <%= @spenden_weihnachtsmarkt.iban %> </strong><br>
+  	<strong> Summe: 
+  <%= @spenden_weihnachtsmarkt.summe %> €
+</strong>
+</p>
+  
+  
+</div>
+
+
+
+<%= link_to 'Bearbeiten', edit_spenden_weihnachtsmarkt_path(@spenden_weihnachtsmarkt), class:"btn btn-success" %>   
+<%= link_to 'Spende abschicken', home_spenden_path, class:"btn btn-success" %>
+
+</body>
