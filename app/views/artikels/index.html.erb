@@ -1,3 +1,4 @@
+
 <body style="background-image: url('https://media.macphun.com/img/uploads/customer/blog/1543597882/15435994595c0175636b7260.24778845.jpg?q=85&w=1680');">
 
   <h1 id= "Art"> Artikelliste </h1>
@@ -24,10 +25,9 @@
 
   <tbody>
     <% @artikels.each do |artikel| %>
+
       <tr class="table-light table-bordered border-dark">
-        <td>
-          <%= link_to artikel.artikelname, artikel %> 
-        </td>
+        <td><%= link_to artikel.artikelname, artikel %></td>
         <td><%= artikel.preis %></td>
         <td><%= artikel.verkaeufer %></td>
         <td><%= artikel.anzahl %></td>
@@ -36,7 +36,7 @@
         <td><%= artikel.beschreibung %></td>
         
         
-        <td><%= link_to 'Löschen', artikel, method: :delete, data: { confirm: 'Wollen Sie den Artikel wirklich löschen??' }, class:"btn btn-outline-danger btn-sm"%></td>
+        <td><%= link_to 'Löschen', artikel, method: :delete, data: { confirm: 'Wollen Sie den Artikel wirklich löschen?' }, class:"btn btn-outline-danger btn-sm"%></td>
       </tr>
     <% end %>
   </tbody>
@@ -45,8 +45,11 @@
 
 <br>
 
+
 <%= link_to 'Neuer Artikel', new_artikel_path, class:"btn btn-success" %>
 
+
 <% end %>
+
 
 </body>
