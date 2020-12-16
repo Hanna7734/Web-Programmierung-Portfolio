@@ -16,7 +16,7 @@
 
 <%= link_to 'Zurück', artikels_path, class:"btn btn-success" %>
 <br/><br/>
-<%= link_to 'Löschen', @artikel, method: :delete, data: { confirm: 'Wollen Sie den Artikel wirklich löschen?' }, class:"btn btn-outline-danger"%>
+<%= button_to 'Löschen', @artikel, method: :delete, data: { confirm: 'Wollen Sie den Artikel wirklich löschen?' }, class:"btn btn-outline-danger"%>
 </div>
 
 

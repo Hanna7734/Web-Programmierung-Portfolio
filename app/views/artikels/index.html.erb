@@ -36,7 +36,7 @@
         <td><%= artikel.beschreibung %></td>
         
         
-        <td><%= link_to 'Löschen', artikel, method: :delete, data: { confirm: 'Wollen Sie den Artikel wirklich löschen?' }, class:"btn btn-outline-danger btn-sm"%></td>
+        <td><%= button_to 'Löschen', artikel, method: :delete, data: { confirm: 'Wollen Sie den Artikel wirklich löschen?' }, class:"btn btn-outline-danger btn-sm"%></td>
       </tr>
     <% end %>
   </tbody>
